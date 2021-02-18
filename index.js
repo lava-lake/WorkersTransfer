@@ -5,7 +5,7 @@ async function handleRequest(request) {
         for (const entry of formData) {
             form[entry[0]] = entry[1]
         }
-        return fetch(form['url'])
+        return await fetch(form['url'])
     }
     if (request.method == "GET") {
         const response = await fetch("https://github.com/lava-lake/WorkersTransfer/raw/main/index.html")
